@@ -1,2 +1,2 @@
 # PYTHON
-# This is my repository for python progs.
+# This is my repository for python projects.
