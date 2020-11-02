@@ -4,7 +4,7 @@ def start():
     print("Welcome to tic tac toe!")
     display1_board()
     player1 = input("Select the char player1 X/O:")
-    if (player1 != "X") and (player1 != "O"):
+    while (player1 != "X") and (player1 != "O"):
         print("Error in the selection of characters!")
         player1 = input("Select the char player1 X/O:")
     if player1 == "X":
@@ -63,7 +63,7 @@ def game(player1, player2, board):
 def play1(player1, player2, board):
     player1pos = int(input("Enter the positions for the char player1:"))
     li = list(range(1, 10))
-    if player1pos not in li:
+    while player1pos not in li:
         print("Select a correct index")
         player1pos = int(input("Enter the positions for the char player1:"))
     if board[player1pos - 1] == player2:
@@ -78,7 +78,7 @@ def play1(player1, player2, board):
 def play2(player2, player1, board):
     player2pos = int(input("Enter the position player2:"))
     li = list(range(1, 10))
-    if player2pos not in li:
+    while player2pos not in li:
         print("Select a correct index!")
         player2pos = int(input("Enter the position player2:"))
     if board[player2pos - 1] == player1:
