@@ -8,3 +8,5 @@ print(type(result))  # prints the class og the result
 soup = bs4.BeautifulSoup(result.text, "lxml")  # prints the source code in a html format
 title = soup.select('title')  # creates a list of the text present in the tags
 print(title)  # prints the list
+site_para = soup.select('p') # selects all the text enclosed in <p> tags(can be more than 1)
+print(site_para[1].getText()) # prints only the text of the second para enclosed by <p>
